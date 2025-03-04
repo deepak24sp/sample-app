@@ -1,18 +1,16 @@
+import React from "react";
+import PolicyForm from "./PolicyForm";
 import sample from "./data/sample.json";
 
-function App() {
+const App = () => {
+  const policyData = sample;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>Hello world</p>
-        <ul>
-          {sample.map((item, index) => (
-            <li key={index}>{JSON.stringify(item.name)}</li>
-          ))}
-        </ul>
-      </header>
+    <div>
+      <h1>Policy Settings</h1>
+      <PolicyForm policyData={policyData} />
     </div>
   );
-}
+};
 
 export default App;
